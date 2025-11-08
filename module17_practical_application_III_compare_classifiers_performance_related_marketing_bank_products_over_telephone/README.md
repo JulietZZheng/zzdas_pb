@@ -1,4 +1,3 @@
-#%% md
 ## Conclusions
 
 The business objective of this project is to predict how and what bank client will subscribe to a term deposit.
