@@ -2,6 +2,9 @@
 
 ## 📁 Available Deliverables
 
+![Analysis Overview](../data/processed/time_series_overview.png)
+*Complete analysis framework: 31 years, 186 countries, multiple analytical methods*
+
 ### 1. **EXECUTIVE_SUMMARY.md** 📄
 **Audience:** Policymakers, executives, decision-makers
 **Length:** 4-5 pages

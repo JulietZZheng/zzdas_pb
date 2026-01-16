@@ -186,6 +186,9 @@ This research contributes to the environmental policy literature by:
 - Forest area %: r = +0.69 (unexpected positive - inverse development relationship)
 - Population total: r = +0.45 (scale effect)
 
+![Correlation Analysis](../data/processed/correlation_heatmap_pearson_full.png)
+*Figure 5: Comprehensive correlation matrix showing relationships between all variables*
+
 **Multicollinearity Assessment:**
 - VIF analysis conducted
 - GDP and life expectancy highly correlated (VIF > 5)
@@ -238,11 +241,17 @@ This research contributes to the environmental policy literature by:
 4. **Urban population** moderately positive (concentration effect)
 5. **Forest area** positive correlation (developing nations pattern)
 
+![Regression Coefficients](../data/processed/lr_coefficients.png)
+*Figure 6: Regression coefficients showing relative importance of predictors*
+
 **Model Diagnostics:**
 - Residuals: Near-normal distribution with some heteroscedasticity
 - No severe violations of OLS assumptions
 - Spatial autocorrelation in residuals (Moran's I = 0.15, p < 0.01)
   - Indicates need for spatial methods (addressed in Section 7)
+
+![Residual Analysis](../data/processed/residual_analysis_plots.png)
+*Figure 7: Comprehensive residual diagnostics for model validation*
 
 ### 5.3 Interpretation
 
@@ -297,10 +306,16 @@ Given annual data, traditional seasonal decomposition not applicable. However:
 - R² (in-sample): 0.87
 - All coefficients statistically significant (p < 0.05)
 
+![ARIMA Forecast](../data/processed/ts_arima_forecast.png)
+*Figure 8: ARIMA model fit and future projections with confidence intervals*
+
 **Forecast (2021-2025):**
 - Continued decline projected if trends maintained
 - 2025 projection: 25.2 μg/m³ (95% CI: 22.1-28.3)
 - **Caveat**: Assumes policies and trends continue
+
+![ARIMA Diagnostics](../data/processed/ts_arima_diagnostics.png)
+*Figure 9: ARIMA model diagnostics showing residual analysis*
 
 ### 6.5 Intervention Analysis: Paris Agreement (2015)
 
@@ -385,6 +400,9 @@ The Paris Agreement shows measurable association with improved air quality. Whil
 - Low pollution despite high-pollution neighbors
 - Examples: Policy leaders in challenging regions
 
+![LISA Cluster Analysis](../data/processed/spatial_lisa_clusters.png)
+*Figure 10: Spatial clustering showing hotspots, coldspots, and spatial outliers*
+
 **Difference:**
 - **Hotspot-Coldspot gap: 28.49 μg/m³**
 - **This represents a 212% difference** (coldspot baseline)
@@ -418,6 +436,9 @@ The Paris Agreement shows measurable association with improved air quality. Whil
 - **GWR Local R² (mean): 0.2893**
 - **Improvement: +28.8% variance explained**
 - **AIC: Reduced by 47 points (better fit)**
+
+![GWR Coefficients](../data/processed/spatial_gwr_coefficients.png)
+*Figure 11: Geographically weighted regression showing spatially varying coefficients*
 
 **Interpretation:**
 GWR results confirm that relationships between energy use and pollution vary dramatically by region. One-size-fits-all policies inappropriate; context-specific interventions needed.
@@ -525,6 +546,9 @@ Given:
 | 4 | 0.318 | 109.7 | 1.389 | 943 |
 | **10** | **0.293** | **123.3** | **1.378** | **531** |
 
+![Elbow Method](../data/processed/elbow_method.png)
+*Figure 12: Elbow method showing optimal number of clusters*
+
 **Selection: k=10**
 - Highest Calinski-Harabasz
 - Reasonable silhouette (>0.25)
@@ -573,6 +597,12 @@ Given:
 - Interpretation: Moderate agreement between methods, clusters robust
 
 ### 8.6 Detailed Cluster Profiles
+
+![Cluster Profiles Heatmap](../data/processed/cluster_profiles_heatmap.png)
+*Figure 13: Standardized cluster profiles showing distinctive characteristics of each country group*
+
+![Cluster Radar Chart](../data/processed/cluster_radar.png)
+*Figure 14: Radar chart comparison of cluster characteristics*
 
 **Cluster 0: Moderate Performers (Forest-Rich) - 22 countries**
 - PM2.5: +2% vs average (baseline)

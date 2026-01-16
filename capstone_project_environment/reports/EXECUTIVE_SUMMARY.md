@@ -7,6 +7,9 @@
 
 This comprehensive analysis examined **31 years (1990-2020)** of global environmental data covering **186 countries** to quantify the relationships between human activities and air pollution, measured by PM2.5 particulate matter. Using advanced statistical methods, spatial analysis, and machine learning, we identified key drivers, successful interventions, and tailored strategies for different country profiles.
 
+![Global PM2.5 Distribution](../data/processed/spatial_pm25_map.png)
+*Figure 1: Global PM2.5 air pollution levels showing geographic distribution and hotspots*
+
 ---
 
 ### **Key Findings**
@@ -26,6 +29,9 @@ This comprehensive analysis examined **31 years (1990-2020)** of global environm
 - **Trajectory**: Downward trend accelerated after 2015 climate agreement
 - **Forecast accuracy**: ARIMA models predict with 4.93% error, suggesting reliable future projections
 
+![Global PM2.5 Trends](../data/processed/ts_intervention_paris.png)
+*Figure 2: Historical trends showing Paris Agreement impact and future projections*
+
 #### **3. Primary Drivers**
 
 **Most Modifiable Factors:**
@@ -36,11 +42,17 @@ This comprehensive analysis examined **31 years (1990-2020)** of global environm
 **Fixed/Demographic Factors:**
 - Population scale and urban concentration (amplify exposure but manageable with proper interventions)
 
+![Key Drivers and Impacts](../data/processed/quantified_impacts_summary.png)
+*Figure 4: Quantified impacts of primary drivers on air quality*
+
 ---
 
 ### **Country Segmentation: 10 Distinct Profiles**
 
 Our cluster analysis identified 10 distinct country groups requiring tailored strategies:
+
+![Country Clusters](../data/processed/clusters_2d.png)
+*Figure 3: Country segmentation showing 10 distinct profiles based on environmental and socioeconomic factors*
 
 #### **🟢 Green Leaders (32 countries, 17.2%)**
 - **Profile**: Very low pollution + High income + Excellent well-being
